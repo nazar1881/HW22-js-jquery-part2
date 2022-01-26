@@ -115,7 +115,9 @@ let todo = new TodoList(ul$);
 todo.showTodos();
 
 createBtn$.on('click', function () {
-    todo.addTodo(input$.val());
-    todo.showTodos();
-    input$.val("");
+    if(input$.val()) {
+        todo.addTodo(input$.val());
+        todo.showTodos();
+        input$.val("");
+    }
 });
