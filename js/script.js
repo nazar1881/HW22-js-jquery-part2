@@ -119,5 +119,7 @@ createBtn$.on('click', function () {
         todo.addTodo(input$.val());
         todo.showTodos();
         input$.val("");
+    } else {
+        alert("Error, you can`t add empty task! Please enter task)")
     }
 });
